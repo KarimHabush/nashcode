@@ -12,6 +12,8 @@ import AiIcon from './../../assets/ai_icon.svg';
 import ManagementIcon from './../../assets/management_icon.svg';
 import Grid from '@material-ui/core/Grid'
 import LineCircle from './../../assets/line_circle_dark.svg';
+import AnimateOnScroll from './../../helpers/AnimateOnScroll';
+import Fade from 'react-reveal/Fade'
 
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
@@ -84,50 +86,58 @@ function OurExpertises(props) {
     return (
         <div className={classes.container}>
             <Container maxWidth="lg">
-                <Typography variant="h3" component="h2" className={classes.title}>OUR EXPERTISES</Typography>
+                <Fade bottom>
+                    <Typography variant="h3" component="h2" className={classes.title}>OUR EXPERTISES</Typography>
 
-                <Typography variant="h5" component="p" className={classes.description}>
-                    We use the latest technologies to provide the best software engineering
+                </Fade>
+                <Fade bottom>
+                    <Typography variant="h5" component="p" className={classes.description}>
+                        We use the latest technologies to provide the best software engineering
                     <br />solutions that respond to the modern market needs.
                 </Typography>
+                </Fade>
 
-                <Tabs
-                    className={classes.tabs}
-                    value={value}
-                    onChange={handleChange}
-                    indicatorColor="primary"
-                    textColor="primary"
-                    centered
-                >
-                    {expertisesList.map(item => (
-                        <Tab key={item.id} className={classes.tab} icon={<img className={classes.tabIcon} width="100" src={item.icon} alt={item.title} />} {...a11yProps()} />
-                    ))}
-                </Tabs>
-                {expertisesList.map(item => (
-                    <TabPanel className={classes.tabPanel}
-                        key={item.id}
-                        index={item.id}
+                <Fade bottom>
+                    <Tabs
+                        className={classes.tabs}
                         value={value}
+                        onChange={handleChange}
+                        indicatorColor="primary"
+                        textColor="primary"
+                        centered
                     >
-                        <div className={classes.lineCircle} >
-                            <img src={LineCircle} width="200" alt="line circle icon" />
-                        </div>
-                        <Grid container >
-                            <Grid item xs={4} >
-                                <img src={item.icon} height="150" alt="AI icon" />
-                            </Grid>
-                            <Grid item xs={8} className={classes.tabInfo}>
-                                <Typography variant="h3" component="h4" className={classes.infoTitle} >
-                                    {item.title}
-                                </Typography>
-                                <Typography variant="h5" component="p"  >
-                                    {item.description}
-                                </Typography>
-                            </Grid>
+                        {expertisesList.map(item => (
+                            <Tab key={item.id} className={classes.tab} icon={<img className={classes.tabIcon} width="100" src={item.icon} alt={item.title} />} {...a11yProps()} />
+                        ))}
+                    </Tabs>
+                    {expertisesList.map(item => (
+                        <TabPanel className={classes.tabPanel}
+                            key={item.id}
+                            index={item.id}
+                            value={value}
+                        >
+                            <div className={classes.lineCircle} >
+                                <AnimateOnScroll animationStyle="rotate" loops={2} method={"perc"} from={180}  >
+                                    <img src={LineCircle} width="200" alt="line circle icon" />
+                                </AnimateOnScroll>
+                            </div>
+                            <Grid container >
+                                <Grid item xs={4} >
+                                    <img src={item.icon} height="150" alt="AI icon" />
+                                </Grid>
+                                <Grid item xs={8} className={classes.tabInfo}>
+                                    <Typography variant="h3" component="h4" className={classes.infoTitle} >
+                                        {item.title}
+                                    </Typography>
+                                    <Typography variant="h5" component="p"  >
+                                        {item.description}
+                                    </Typography>
+                                </Grid>
 
-                        </Grid>
-                    </TabPanel>
-                ))}
+                            </Grid>
+                        </TabPanel>
+                    ))}
+                </Fade>
 
 
             </Container>

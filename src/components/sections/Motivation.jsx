@@ -5,6 +5,9 @@ import StarIcon from './../../assets/value_star.svg';
 import GiftIcon from './../../assets/value_gift.svg';
 import DiamondIcon from './../../assets/value_diamond.svg';
 import LineCircle from './../../assets/line_circle_dark.svg';
+import Rotate from 'react-reveal/Rotate'
+import Fade from 'react-reveal/Fade'
+import AnimateOnScroll from './../../helpers/AnimateOnScroll';
 const valuesList = [
     [{
         id: 0,
@@ -58,16 +61,24 @@ function WhoWeAre(props) {
         <div className={classes.container}>
             <div className={classes.lineCircle} >
 
-                <img width='450' src={LineCircle} />
+                <AnimateOnScroll animationStyle="rotate" loops={2} method={"perc"}   >
+                    <Rotate top left>
+                        <img width='450' src={LineCircle}  />
+                    </Rotate>
+                </AnimateOnScroll>
             </div>
             <Container maxWidth="lg">
-                <Typography variant="h3" component="h2" className={classes.title}>
-                    WHAT MOTIVATES US?
+                <Fade bottom>
+                    <Typography variant="h3" component="h2" className={classes.title}>
+                        WHAT MOTIVATES US?
                 </Typography>
-                <Typography variant="h5" component="p" className={classes.description}>
-                    We are a team of dreamers pushed by our curiosity
+                </Fade>
+                <Fade bottom>
+                    <Typography variant="h5" component="p" className={classes.description}>
+                        We are a team of dreamers pushed by our curiosity
                     <br />to experiment and create meaningful solutions using what we learned.
                 </Typography>
+                </Fade>
 
 
 
@@ -77,11 +88,13 @@ function WhoWeAre(props) {
 
                             {values.map(value => (
                                 <Grid item xs={3} key={value.id}>
+                                    <Fade bottom>
 
-                                    <img height="40" src={value.icon} />
-                                    <Typography variant="h5" component="p" className={classes.valueTitle}>
-                                        {value.title}
-                                    </Typography>
+                                        <img height="40" src={value.icon} />
+                                        <Typography variant="h5" component="p" className={classes.valueTitle}>
+                                            {value.title}
+                                        </Typography>
+                                    </Fade>
                                 </Grid>
                             ))}
                         </Grid>

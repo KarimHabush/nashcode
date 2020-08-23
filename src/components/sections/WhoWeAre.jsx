@@ -2,6 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Container, Typography, Grid } from '@material-ui/core';
 import KarimPic from './../../assets/DSCN3403.jpg'
+import Fade from 'react-reveal'
 
 
 function WhoWeAre(props) {
@@ -9,14 +10,18 @@ function WhoWeAre(props) {
     return (
         <div className={classes.container}>
             <Container maxWidth="lg">
-                <Typography variant="h3" component="h2" className={classes.title}>
-                    WHO WE ARE?
+                <Fade bottom>
+                    <Typography variant="h3" component="h2" className={classes.title}>
+                        WHO WE ARE?
                 </Typography>
+                </Fade>
+                <Fade bottom>
 
-                <Typography variant="h5" component="p" className={classes.description}>
-                    We are a team of dreamers pushed by our curiosity
+                    <Typography variant="h5" component="p" className={classes.description}>
+                        We are a team of dreamers pushed by our curiosity
                     <br />to experiment and create meaningful solutions using what we learned.
                 </Typography>
+                </Fade>
 
 
 
@@ -24,20 +29,24 @@ function WhoWeAre(props) {
                     <Grid item xs={1} />
 
                     <Grid item xs={4} >
+                        <Fade bottom>
 
-                        <img src={KarimPic} width="100%" alt="Karim's picture" />
-                        <Typography variant="h5" component="p" className={classes.presentations}>
-                            <span className={classes.bold}>NADA DABACH</span> is a Big Data student, lorem ipsum.
+                            <img src={KarimPic} width="100%" alt="Karim's picture" />
+                            <Typography variant="h5" component="p" className={classes.presentations}>
+                                <span className={classes.bold}>NADA DABACH</span> is a Big Data student, lorem ipsum.
                         </Typography>
+                        </Fade>
                     </Grid>
                     <Grid item xs={2} />
 
                     <Grid item xs={4} >
+                        <Fade bottom>
 
-                        <img src={KarimPic} width="100%" alt="Karim's picture" />
-                        <Typography variant="h5" component="p" className={classes.presentations}>
-                            <span className={classes.bold}>NADA DABACH</span> is a Big Data student, lorem ipsum.
+                            <img src={KarimPic} width="100%" alt="Karim's picture" />
+                            <Typography variant="h5" component="p" className={classes.presentations}>
+                                <span className={classes.bold}>NADA DABACH</span> is a Big Data student, lorem ipsum.
                             </Typography>
+                        </Fade>
                     </Grid>
                     <Grid item xs={1} />
 
@@ -46,20 +55,24 @@ function WhoWeAre(props) {
                     <Grid item xs={1} />
 
                     <Grid item xs={4} >
+                        <Fade bottom>
 
-                        <img src={KarimPic} width="100%" alt="Karim's picture" />
-                        <Typography variant="h5" component="p" className={classes.presentations}>
-                            <span className={classes.bold}>NADA DABACH</span> is a Big Data student, lorem ipsum.
+                            <img src={KarimPic} width="100%" alt="Karim's picture" />
+                            <Typography variant="h5" component="p" className={classes.presentations}>
+                                <span className={classes.bold}>NADA DABACH</span> is a Big Data student, lorem ipsum.
                         </Typography>
+                        </Fade>
                     </Grid>
                     <Grid item xs={2} />
 
                     <Grid item xs={4} >
+                        <Fade bottom>
 
-                        <img src={KarimPic} width="100%" alt="Karim's picture" />
-                        <Typography variant="h5" component="p" className={classes.presentations}>
-                            <span className={classes.bold}>NADA DABACH</span> is a Big Data student, lorem ipsum.
+                            <img src={KarimPic} width="100%" alt="Karim's picture" />
+                            <Typography variant="h5" component="p" className={classes.presentations}>
+                                <span className={classes.bold}>NADA DABACH</span> is a Big Data student, lorem ipsum.
                             </Typography>
+                        </Fade>
                     </Grid>
                     <Grid item xs={1} />
 

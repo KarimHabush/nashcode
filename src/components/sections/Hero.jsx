@@ -8,6 +8,7 @@ import PropTypes from 'prop-types';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import NIcon from './../../assets/NIcon';
+import Fade from 'react-reveal/Fade'
 const styles = theme => ({
     logo: {
         height: 18,
@@ -99,12 +100,15 @@ class Hero extends React.Component {
                         </Toolbar>
                         <Grid container direction="row" spacing={1} className={classes.gridOne}>
                             <Grid item xs={7} >
-
-                                <Typography component="h1" variant="h3" className={classes.homeTitle}>
-                                    We build products to satisfy<br />both <span className={classes.colorPrimary}>you</span> and <span className={classes.colorPrimary}>our</span> team!
+                                <Fade left>
+                                    <Typography component="h1" variant="h3" className={classes.homeTitle}>
+                                        We build products to satisfy<br />both <span className={classes.colorPrimary}>you</span> and <span className={classes.colorPrimary}>our</span> team!
                                     </Typography>
-                                <button className={classes.button}>SEE OUR WORK</button>
+                                </Fade>
+                                <Fade bottom>
+                                    <button className={classes.button}>SEE OUR WORK</button>
 
+                                </Fade>
                             </Grid>
                             <Grid item xs={5} className={classes.subGridTwo}>
                                 <NIcon className={classes.nIcon} />
