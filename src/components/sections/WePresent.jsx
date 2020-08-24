@@ -6,33 +6,6 @@ import HeartIcon from './../../assets/heart.svg';
 import LineCircle from './../../assets/line_circle.svg';
 import AnimateOnScroll from './../../helpers/AnimateOnScroll';
 import Fade from 'react-reveal/Fade'
-const useStyles = makeStyles((theme) => ({
-    container: {
-        background: 'linear-gradient(180deg, #0F0A3C 50%, #F9F9F9 50%)',
-
-    },
-    rectangle: {
-        backgroundColor: '#07456F',
-        textAlign: 'center',
-        borderRadius: 10,
-        padding: 70,
-        position: 'relative',
-
-    },
-
-    lineCircle: {
-        position: 'absolute',
-        left: -100,
-        top: -70
-    },
-    titles: {
-        color: "#f9f9f9"
-    },
-    animatePos: {
-        left: -300,
-        position: 'absolute'
-    }
-}));
 
 
 function WePresent(props) {
@@ -63,5 +36,34 @@ function WePresent(props) {
         </div>
     )
 }
+
+const useStyles = makeStyles((theme) => ({
+    container: {
+        background: 'linear-gradient(180deg, #0F0A3C 50%, #F9F9F9 50%)',
+
+    },
+    rectangle: {
+        backgroundColor: '#07456F',
+        textAlign: 'center',
+        borderRadius: 10,
+        padding: 70,
+        position: 'relative',
+
+    },
+
+    lineCircle: {
+        position: 'absolute',
+        left: -100,
+        top: -70
+    },
+    titles: {
+        color: "#f9f9f9"
+    },
+    animatePos: {
+        left: -300,
+        position: 'absolute'
+    }
+}));
+
 
 export default WePresent;

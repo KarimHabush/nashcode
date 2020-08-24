@@ -19,38 +19,65 @@ function OurWork(props) {
                 <Grid container spacing={10}>
                     <Grid item xs={6} >
                         <Fade bottom>
-                            <img src={WebsiteImage} width="100%" alt="Karim's picture" />
-                            <Typography variant="h5" component="p" className={classes.presentations}>
-                                We built it, we'll rebuild it :)
-                        </Typography>
+
+                            <div className={classes.imagebox}>
+                                <img src={WebsiteImage} className={classes.projectImage} alt="Project four" />
+                            </div>
+
+                            <Typography variant="h5" component="p" className={classes.projectTitle}>
+                                Mama Moualimati
+                            </Typography>
+                            <Typography variant="p" component="p" className={classes.projectDesc}>
+                                Study from home :)
+                            </Typography>
                         </Fade>
                         <Fade bottom>
-                            <img src={AiImage} width="100%" alt="Karim's picture" />
-                            <Typography variant="h5" component="p" className={classes.presentations}>
-                                We built it, we'll rebuild it :)
-                        </Typography>
+
+                            <div className={classes.imagebox}>
+                                <img src={AiImage} className={classes.projectImage} alt="Project four" />
+                            </div>
+
+                            <Typography variant="h5" component="p" className={classes.projectTitle}>
+                                Mama Moualimati
+                            </Typography>
+                            <Typography variant="p" component="p" className={classes.projectDesc}>
+                                Study from home :)
+                            </Typography>
                         </Fade>
 
                     </Grid>
                     <Grid item xs={6} className={classes.addPadding}>
                         <Fade bottom>
 
-                            <img src={AiImage} width="100%" alt="Karim's picture" />
-                            <Typography variant="h5" component="p" className={classes.presentations}>
-                                We built it, we'll rebuild it :)
-                        </Typography>
+                            <div className={classes.imagebox}>
+                                <img src={AiImage} className={classes.projectImage} alt="Project four" />
+                            </div>
+
+                            <Typography variant="h5" component="p" className={classes.projectTitle}>
+                                Mama Moualimati
+                            </Typography>
+                            <Typography variant="p" component="p" className={classes.projectDesc}>
+                                Study from home :)
+                            </Typography>
                         </Fade>
                         <Fade bottom>
 
-                            <img src={WebsiteImage} width="100%" alt="Karim's picture" />
-                            <Typography variant="h5" component="p" className={classes.presentations}>
-                                We built it, we'll rebuild it :)
-                        </Typography>
+                            <div className={classes.imagebox}>
+                                <img src={WebsiteImage} className={classes.projectImage} alt="Project four" />
+                            </div>
+
+                            <Typography variant="h5" component="p" className={classes.projectTitle}>
+                                Mama Moualimati
+                            </Typography>
+                            <Typography variant="p" component="p" className={classes.projectDesc}>
+                                Study from home :)
+                            </Typography>
                         </Fade>
                     </Grid>
 
                 </Grid>
             </Container>
+
         </div>
     )
 }
@@ -68,14 +95,39 @@ const useStyles = makeStyles((theme) => ({
         fontWeight: 600,
         marginBottom: 60
     },
-    presentations: {
-        color: '#0F0A3C',
+    projectTitle: {
+        color: '#404040',
         textAlign: 'left',
-        padding: 20,
-        paddingBottom: 60
+        fontWeight: 600,
+        paddingLeft: 5,
+        paddingTop: 10
+    },
+    projectDesc: {
+        color: '#606060',
+        textAlign: 'left',
+        paddingBottom: 60,
+        paddingLeft: 5,
     },
     addPadding: {
         paddingTop: '150px !important'
+    },
+    projectImage: {
+        cursor: 'pointer',
+        maxWidth: '100%',
+        transition: 'all 4s ',
+        width: '100%',
+        height: 'auto',
+        transform: 'scale(1)',
+        display: 'inline-block',
+        '&:hover': {
+            transform: 'scale(1.1)'
+        }
+    },
+    imagebox: {
+        position: 'relative',
+        margin: 'auto',
+        overflow: 'hidden',
+        width: '100%',
     }
 }));
 

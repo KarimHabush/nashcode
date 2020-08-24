@@ -2,10 +2,7 @@ import React from "react";
 import throttle from "lodash/throttle";
 import PropTypes from 'prop-types';
 
-const wrapperStyles = {
-  display: 'inline-block',
-  position: 'relative'
-}
+
 
 export default class AnimateOnScroll extends React.Component {
   constructor(props) {
@@ -80,6 +77,8 @@ export default class AnimateOnScroll extends React.Component {
           transform: `translateY(${-this.state.scrollTop / 20}%)`,
           transition: !scrollOnce ? '' : `transform ${(animationDuration || animationDuration === 0) ? animationDuration : '0.1'}s`,
         }
+        break;
+      default:
         break;
     }
     return animationStyle;

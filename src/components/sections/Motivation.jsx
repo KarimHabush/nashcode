@@ -63,7 +63,7 @@ function WhoWeAre(props) {
 
                 <AnimateOnScroll animationStyle="rotate" loops={2} method={"perc"}   >
                     <Rotate top left>
-                        <img width='450' src={LineCircle}  />
+                        <img width='450' src={LineCircle}  alt="Line Circle"/>
                     </Rotate>
                 </AnimateOnScroll>
             </div>
@@ -90,7 +90,7 @@ function WhoWeAre(props) {
                                 <Grid item xs={3} key={value.id}>
                                     <Fade bottom>
 
-                                        <img height="40" src={value.icon} />
+                                        <img height="40" src={value.icon} alt={value.title} />
                                         <Typography variant="h5" component="p" className={classes.valueTitle}>
                                             {value.title}
                                         </Typography>

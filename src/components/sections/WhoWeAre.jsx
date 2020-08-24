@@ -31,7 +31,7 @@ function WhoWeAre(props) {
                     <Grid item xs={4} >
                         <Fade bottom>
 
-                            <img src={KarimPic} width="100%" alt="Karim's picture" />
+                            <img src={KarimPic} width="100%" alt="Nada" />
                             <Typography variant="h5" component="p" className={classes.presentations}>
                                 <span className={classes.bold}>NADA DABACH</span> is a Big Data student, lorem ipsum.
                         </Typography>
@@ -42,9 +42,9 @@ function WhoWeAre(props) {
                     <Grid item xs={4} >
                         <Fade bottom>
 
-                            <img src={KarimPic} width="100%" alt="Karim's picture" />
+                            <img src={KarimPic} width="100%" alt="Karim" />
                             <Typography variant="h5" component="p" className={classes.presentations}>
-                                <span className={classes.bold}>NADA DABACH</span> is a Big Data student, lorem ipsum.
+                                <span className={classes.bold}>ABDELKARIM HABOUCH</span> is a Big Data student, lorem ipsum.
                             </Typography>
                         </Fade>
                     </Grid>
@@ -57,9 +57,9 @@ function WhoWeAre(props) {
                     <Grid item xs={4} >
                         <Fade bottom>
 
-                            <img src={KarimPic} width="100%" alt="Karim's picture" />
+                            <img src={KarimPic} width="100%" alt="Safoin" />
                             <Typography variant="h5" component="p" className={classes.presentations}>
-                                <span className={classes.bold}>NADA DABACH</span> is a Big Data student, lorem ipsum.
+                                <span className={classes.bold}>SAFOINE ELKHABICH</span> is a Big Data student, lorem ipsum.
                         </Typography>
                         </Fade>
                     </Grid>
@@ -68,9 +68,9 @@ function WhoWeAre(props) {
                     <Grid item xs={4} >
                         <Fade bottom>
 
-                            <img src={KarimPic} width="100%" alt="Karim's picture" />
+                            <img src={KarimPic} width="100%" alt="Hamza" />
                             <Typography variant="h5" component="p" className={classes.presentations}>
-                                <span className={classes.bold}>NADA DABACH</span> is a Big Data student, lorem ipsum.
+                                <span className={classes.bold}>HAMZA MOGNI</span> is a Big Data student, lorem ipsum.
                             </Typography>
                         </Fade>
                     </Grid>

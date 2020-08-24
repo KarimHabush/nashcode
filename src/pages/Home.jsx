@@ -5,7 +5,7 @@ import OurExpertises from './../components/sections/OurExpertises'
 import WhoWeAre from './../components/sections/WhoWeAre'
 import Motivation from './../components/sections/Motivation'
 import OurWork from './../components/sections/OurWork'
-import Fade from 'react-reveal/Fade'
+import Footer from './../components/sections/Footer'
 function Home(props){
     return (
         <div>
@@ -15,6 +15,7 @@ function Home(props){
             <OurWork/>
             <WhoWeAre/>
             <Motivation/>
+            <Footer/>
         </div>
     )
 }

@@ -7,7 +7,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <Router>
+      <Router basename="/nashcode">
         <Route exact path="/" component={Home} />
       </Router>
     </div>

@@ -177,7 +177,7 @@ const useStyles = makeStyles((theme) => ({
     },
     tabPanel: {
         padding: '50px 0',
-        boxShadow: '0 0 10px #009F9D',
+        boxShadow: '0 0 20px #eeeeee',
         position: 'relative'
     },
     infoTitle: {
