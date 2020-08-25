@@ -150,17 +150,17 @@ function OurExpertises(props) {
 const useStyles = makeStyles((theme) => ({
     container: {
         textAlign: 'center',
-        padding: '100px 0',
+        padding: '0px 0',
         backgroundColor: '#f9f9f9'
     },
     title: {
         fontWeight: 600,
         color: '#0F0A3C',
-        marginBottom: 60
+        marginBottom: 45
     },
     description: {
         color: '#404040',
-        marginBottom: 100
+        marginBottom: 70
     },
     tabs: {
         width: "100%"

@@ -2,7 +2,7 @@ import React from 'react'
 import Container from '@material-ui/core/Container'
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
-import HeartIcon from './../../assets/heart.svg';
+import HeartIcon from './../../assets/HeartIcon';
 import LineCircle from './../../assets/line_circle.svg';
 import AnimateOnScroll from './../../helpers/AnimateOnScroll';
 import Fade from 'react-reveal/Fade'
@@ -17,14 +17,14 @@ function WePresent(props) {
 
                     <Container maxWidth="md" className={classes.rectangle}>
                         <div className={classes.lineCircle} >
-                            <AnimateOnScroll animationDuration={0.2} animationStyle='rotate' loops={2} method={"perc"} from={90}>
+                            <AnimateOnScroll animationDuration={0.2} animationStyle='rotate' loops={5} method={"perc"} from={90}>
                                 <img src={LineCircle} width="200" alt="line circle icon" />
                             </AnimateOnScroll>
                         </div>
 
 
                         <Typography variant="h3" component="h2" className={classes.titles}>
-                            We'd <img width="50" src={HeartIcon} alt="heart icon" /> to present ourselves
+                            We'd <HeartIcon width="50" /> to present ourselves
                 </Typography>
                         <Typography variant="h4" component="h2" className={classes.titles}>
                             Don't forget to reach out too!

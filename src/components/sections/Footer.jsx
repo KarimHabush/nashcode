@@ -18,7 +18,7 @@ function Footer(props) {
                         <img width="120" src={LogoLight} alt="Logo dark" />
                     </Grid>
                     <Grid item xs={6} className={classes.alignRight}>
-                        <Typography variant="p" component="p" >Copyright by NASH-CODE. All rights reserved. 2020</Typography>
+                        <Typography variant="h6" component="p" >Copyright by NASH-CODE. All rights reserved. 2020</Typography>
                     </Grid>
                 </Grid>
             </Container>

@@ -9,6 +9,56 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import NIcon from './../../assets/NIcon';
 import Fade from 'react-reveal/Fade'
+
+class Hero extends React.Component {
+    render() {
+        const { classes } = this.props;
+        return (
+            <div className={classes.container}>
+                <div className={classes.sectionOne}>
+
+                    <Container maxWidth="lg" className={classes.containerOne}>
+                        <Toolbar disableGutters className={classes.toolbar}>
+                            <img className={classes.logo} src={logo} alt="logo" />
+                            <div className={classes.links}>
+                                <Link className={classes.link} to="/our-work" >
+                                    OUR WORK
+                            </Link>
+                                <Link className={classes.link} to="/blog" >
+                                    BLOG
+                            </Link>
+                                <Link className={classes.link} to="/contact-us" >
+                                    CONTACT US
+                            </Link>
+                            </div>
+                        </Toolbar>
+
+                        <Grid container direction="row" spacing={1} className={classes.gridOne}>
+                            <Grid item xs={7} >
+                                <Fade left>
+                                    <Typography component="h1" variant="h3" className={classes.homeTitle}>
+                                        We build products to satisfy<br />both <span className={classes.colorPrimary}>you</span> and <span className={classes.colorPrimary}>our</span> team!
+                                    </Typography>
+                                </Fade>
+                                <Fade bottom>
+                                    <button className={classes.button}>SEE OUR WORK</button>
+
+                                </Fade>
+                            </Grid>
+                            <Grid item xs={5} className={classes.subGridTwo}>
+                                <NIcon className={classes.nIcon} />
+                            </Grid>
+
+                        </Grid>
+                    </Container>
+                </div>
+            </div>
+
+        )
+    }
+}
+
+
 const styles = theme => ({
     logo: {
         height: 18,
@@ -76,53 +126,6 @@ const styles = theme => ({
         textAlign: 'right'
     }
 });
-class Hero extends React.Component {
-    render() {
-        const { classes } = this.props;
-        return (
-            <div className={classes.container}>
-                <div className={classes.sectionOne}>
-
-                    <Container maxWidth="lg" className={classes.containerOne}>
-                        <Toolbar disableGutters className={classes.toolbar}>
-                            <img className={classes.logo} src={logo} alt="logo" />
-                            <div className={classes.links}>
-                                <Link className={classes.link} to="/our-wrok" >
-                                    OUR WORK
-                            </Link>
-                                <Link className={classes.link} to="/blog" >
-                                    BLOG
-                            </Link>
-                                <Link className={classes.link} to="/contact-us" >
-                                    CONTACT US
-                            </Link>
-                            </div>
-                        </Toolbar>
-                        <Grid container direction="row" spacing={1} className={classes.gridOne}>
-                            <Grid item xs={7} >
-                                <Fade left>
-                                    <Typography component="h1" variant="h3" className={classes.homeTitle}>
-                                        We build products to satisfy<br />both <span className={classes.colorPrimary}>you</span> and <span className={classes.colorPrimary}>our</span> team!
-                                    </Typography>
-                                </Fade>
-                                <Fade bottom>
-                                    <button className={classes.button}>SEE OUR WORK</button>
-
-                                </Fade>
-                            </Grid>
-                            <Grid item xs={5} className={classes.subGridTwo}>
-                                <NIcon className={classes.nIcon} />
-                            </Grid>
-
-                        </Grid>
-                    </Container>
-                </div>
-            </div>
-
-        )
-    }
-}
-
 
 Hero.propTypes = {
     classes: PropTypes.object.isRequired,

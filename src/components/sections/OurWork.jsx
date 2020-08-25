@@ -109,7 +109,6 @@ const useStyles = makeStyles((theme) => ({
         paddingLeft: 5,
     },
     addPadding: {
-        paddingTop: '150px !important'
     },
     projectImage: {
         cursor: 'pointer',
