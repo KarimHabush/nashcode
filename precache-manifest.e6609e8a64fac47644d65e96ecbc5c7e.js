@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ae7ee05e365eddbe659437ef5105adc5",
+    "revision": "31b7072847fa9fd017569ac6cc662ccf",
     "url": "/nashcode/index.html"
   },
   {
-    "revision": "8d95b3bc20f9f92e9938",
+    "revision": "ca8ab0ada0bda26c26ab",
     "url": "/nashcode/static/css/main.afe546c8.chunk.css"
   },
   {
-    "revision": "9d602f2adffc08b99858",
-    "url": "/nashcode/static/js/2.dd929f45.chunk.js"
+    "revision": "7228887ac81ec812930b",
+    "url": "/nashcode/static/js/2.d6420962.chunk.js"
   },
   {
     "revision": "0749163b59fbee32225059cb60c18af6",
-    "url": "/nashcode/static/js/2.dd929f45.chunk.js.LICENSE.txt"
+    "url": "/nashcode/static/js/2.d6420962.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "8d95b3bc20f9f92e9938",
-    "url": "/nashcode/static/js/main.011d2395.chunk.js"
+    "revision": "ca8ab0ada0bda26c26ab",
+    "url": "/nashcode/static/js/main.eeeef4ad.chunk.js"
   },
   {
     "revision": "30c9ccff68460b0fe989",
@@ -40,16 +40,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/nashcode/static/media/frontend_icon.956782ed.svg"
   },
   {
-    "revision": "96b25210ee00212df349eef660b7734d",
-    "url": "/nashcode/static/media/heart.96b25210.svg"
-  },
-  {
     "revision": "969ae42e3b9f849dcdd3d9045c06f2db",
     "url": "/nashcode/static/media/line_circle.969ae42e.svg"
   },
   {
     "revision": "996b752e3239b401f3931249433ed0cc",
     "url": "/nashcode/static/media/line_circle_dark.996b752e.svg"
+  },
+  {
+    "revision": "41e72abde2609c2fcd77eee7cfa3c7ee",
+    "url": "/nashcode/static/media/logo_dark.41e72abd.svg"
   },
   {
     "revision": "011552e9b5058d7693e798ceb77a5689",
@@ -72,11 +72,11 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/nashcode/static/media/value_star.19ef5a9f.svg"
   },
   {
-    "revision": "ec1f8976fa1624bbfd6b7f659d2169b6",
-    "url": "/nashcode/static/media/website_bg.ec1f8976.jpg"
+    "revision": "f258cada3a31aa63fac9200502f03ce4",
+    "url": "/nashcode/static/media/website_bg.f258cada.jpg"
   },
   {
-    "revision": "8ab04bb0e71c821f0eab62e4f599e343",
-    "url": "/nashcode/static/media/word_embedding_bg.8ab04bb0.jpg"
+    "revision": "ff78576b8f2b305d6eb04a5aa4b64ed5",
+    "url": "/nashcode/static/media/word_embedding_bg.ff78576b.jpg"
   }
 ]);
