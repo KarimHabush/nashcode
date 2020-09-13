@@ -2,9 +2,15 @@ import React from 'react';
 import Container from '@material-ui/core/Container'
 import Typography from '@material-ui/core/Typography'
 import { makeStyles, Grid } from '@material-ui/core'
-import WebsiteImage from './../../assets/website_bg.jpg';
-import AiImage from './../../assets/word_embedding_bg.jpg';
+import BgImage from './../../assets/4249454.jpg';
+import BgImageTwo from './../../assets/2754227.jpg';
 import Fade from 'react-reveal/Fade'
+import Rotate from 'react-reveal/Rotate'
+import TriangleOne from './../../assets/TringleOne';
+import TriangleTwo from './../../assets/TriangleTwo';
+import LineCircle from './../../assets/line_circle_dark.svg'
+import AnimateOnScroll from './../../helpers/AnimateOnScroll';
+
 function OurWork(props) {
     const classes = useStyles();
     return (
@@ -14,67 +20,56 @@ function OurWork(props) {
                     <Typography variant="h3" component="h2" className={classes.title}>
                         OUR WORK
                     </Typography>
+                    <Typography variant="h5" component="p" className={classes.description}>
+                        We are a team of dreamers pushed by our curiosity
+                    <br />to experiment and create meaningful solutions using what we learned.
+                </Typography>
+
                 </Fade>
 
                 <Grid container spacing={10}>
-                    <Grid item xs={6} >
-                        <Fade bottom>
-
-                            <div className={classes.imagebox}>
-                                <img src={WebsiteImage} className={classes.projectImage} alt="Project four" />
-                            </div>
-
-                            <Typography variant="h5" component="p" className={classes.projectTitle}>
-                                Mama Moualimati
-                            </Typography>
-                            <Typography variant="p" component="p" className={classes.projectDesc}>
-                                Study from home :)
-                            </Typography>
-                        </Fade>
-                        <Fade bottom>
-
-                            <div className={classes.imagebox}>
-                                <img src={AiImage} className={classes.projectImage} alt="Project four" />
-                            </div>
-
-                            <Typography variant="h5" component="p" className={classes.projectTitle}>
-                                Mama Moualimati
-                            </Typography>
-                            <Typography variant="p" component="p" className={classes.projectDesc}>
-                                Study from home :)
-                            </Typography>
-                        </Fade>
-
+                    <Grid item xs={8} className={classes.projectContainer}>
+                        <Typography className={classes.projectTitle} variant="h4">
+                            Study from home.
+                        </Typography>
+                        <Typography className={classes.projectDesc} variant="h6">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                            ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </Typography>
                     </Grid>
-                    <Grid item xs={6} className={classes.addPadding}>
-                        <Fade bottom>
-
-                            <div className={classes.imagebox}>
-                                <img src={AiImage} className={classes.projectImage} alt="Project four" />
+                    <Grid item xs={4} className={classes.pictureContainer}>
+                        <img className={classes.lineCircle} src={LineCircle} width="200" alt="line circle icon" />
+                        <div className={classes.pictureBackground}>
+                            <img className={classes.imageOne} width="100%" src={BgImage} alt="Background Image" />
+                            <div className={classes.logoContainer}>
+                                <TriangleOne className={classes.logo} />
                             </div>
-
-                            <Typography variant="h5" component="p" className={classes.projectTitle}>
-                                Mama Moualimati
-                            </Typography>
-                            <Typography variant="p" component="p" className={classes.projectDesc}>
-                                Study from home :)
-                            </Typography>
-                        </Fade>
-                        <Fade bottom>
-
-                            <div className={classes.imagebox}>
-                                <img src={WebsiteImage} className={classes.projectImage} alt="Project four" />
-                            </div>
-
-                            <Typography variant="h5" component="p" className={classes.projectTitle}>
-                                Mama Moualimati
-                            </Typography>
-                            <Typography variant="p" component="p" className={classes.projectDesc}>
-                                Study from home :)
-                            </Typography>
-                        </Fade>
+                        </div>
                     </Grid>
+                </Grid>
 
+                <Grid container spacing={10}>
+
+                    <Grid item xs={4} className={classes.pictureContainer}>
+                        <img className={classes.lineCircle} src={LineCircle} width="200" alt="line circle icon" />
+                        <div className={classes.pictureBackground}>
+                            <img className={classes.imageTwo} width="100%" src={BgImageTwo} alt="Background Image" />
+                            <div className={classes.logoContainer}>
+                                <TriangleTwo className={classes.logo} />
+                            </div>
+                        </div>
+                    </Grid>
+                    <Grid item xs={8} className={classes.projectContainer}>
+                        <Typography className={classes.projectTitle} variant="h4">
+                            Study from home.
+                        </Typography>
+                        <Typography className={classes.projectDesc} variant="h6">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                            ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </Typography>
+                    </Grid>
                 </Grid>
             </Container>
 
@@ -91,43 +86,65 @@ const useStyles = makeStyles((theme) => ({
         position: 'relative'
     },
     title: {
-        color: "#0F0A3C",
+        color: '#0F0A3C',
         fontWeight: 600,
         marginBottom: 60
     },
-    projectTitle: {
+    description: {
         color: '#404040',
+        marginBottom: 100
+    },
+    projectContainer: {
         textAlign: 'left',
+        alignSelf: 'center'
+    },
+    projectTitle: {
+        color: '#0F0A3C',
         fontWeight: 600,
-        paddingLeft: 5,
-        paddingTop: 10
+        marginBottom: 30
     },
-    projectDesc: {
-        color: '#606060',
-        textAlign: 'left',
-        paddingBottom: 60,
-        paddingLeft: 5,
-    },
-    addPadding: {
-    },
-    projectImage: {
-        cursor: 'pointer',
-        maxWidth: '100%',
-        transition: 'all 4s ',
+    pictureBackground: {
+        backgroundColor: 'purple',
         width: '100%',
-        height: 'auto',
-        transform: 'scale(1)',
-        display: 'inline-block',
-        '&:hover': {
-            transform: 'scale(1.1)'
-        }
-    },
-    imagebox: {
+        height: '100%',
         position: 'relative',
-        margin: 'auto',
-        overflow: 'hidden',
-        width: '100%',
+        boxShadow: '0 0 40px grey'
+
+    },
+    imageOne: {
+        transform: 'rotate(-10deg)'
+    },
+    imageTwo: {
+        transform: 'rotate(10deg)'
+    },
+    logoContainer: {
+        backgroundColor: '#f9f9f9',
+        height: '80%',
+        width: '70%',
+        position: 'absolute',
+        right: 0,
+        left: 0,
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        top: '10%',
+        boxShadow: '0 0 40px grey',
+    },
+    logo: {
+        width: '50%',
+        transform: 'translateY(120%)'
+
+    },
+    lineCircle: {
+        position: 'absolute',
+        width: '130%',
+        transform: 'rotate(180deg)',
+        left: '-20%',
+        top: 100
+    },
+    pictureContainer: {
+        position: 'relative'
     }
+
 }));
 
 export default OurWork;

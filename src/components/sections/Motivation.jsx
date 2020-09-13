@@ -4,10 +4,7 @@ import { Container, Typography, Grid } from '@material-ui/core';
 import StarIcon from './../../assets/value_star.svg';
 import GiftIcon from './../../assets/value_gift.svg';
 import DiamondIcon from './../../assets/value_diamond.svg';
-import LineCircle from './../../assets/line_circle_dark.svg';
-import Rotate from 'react-reveal/Rotate'
 import Fade from 'react-reveal/Fade'
-import AnimateOnScroll from './../../helpers/AnimateOnScroll';
 const valuesList = [
     [{
         id: 0,
@@ -61,11 +58,6 @@ function WhoWeAre(props) {
         <div className={classes.container}>
             <div className={classes.lineCircle} >
 
-                <AnimateOnScroll animationStyle="rotate" loops={2} method={"perc"}   >
-                    <Rotate top left>
-                        <img width='450' src={LineCircle}  alt="Line Circle"/>
-                    </Rotate>
-                </AnimateOnScroll>
             </div>
             <Container maxWidth="lg">
                 <Fade bottom>
