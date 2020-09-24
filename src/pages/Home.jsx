@@ -6,16 +6,19 @@ import WhoWeAre from './../components/sections/WhoWeAre'
 import Motivation from './../components/sections/Motivation'
 import OurWork from './../components/sections/OurWork'
 import Footer from './../components/sections/Footer'
+
+import Sidebar from './../components/elements/Sidebar'
 function Home(props){
     return (
         <div>
             <Hero/>
             <WePresent/>
-            <OurExpertises/>
+            <OurExpertises />
             <OurWork/>
             <WhoWeAre/>
             <Motivation/>
             <Footer/>
+            <Sidebar/>
         </div>
     )
 }

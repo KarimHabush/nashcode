@@ -55,7 +55,7 @@ const valuesList = [
 function WhoWeAre(props) {
     const classes = useStyles();
     return (
-        <div className={classes.container}>
+        <div className={classes.container} id="motivation">
             <div className={classes.lineCircle} >
 
             </div>

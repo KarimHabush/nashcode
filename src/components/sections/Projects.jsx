@@ -2,13 +2,9 @@ import React from 'react'
 import Container from '@material-ui/core/Container'
 import Toolbar from '@material-ui/core/Toolbar'
 import { Link } from 'react-router-dom'
-import PropTypes from 'prop-types'
 import { makeStyles, Typography } from '@material-ui/core'
 import logo from './../../assets/logo_dark.svg'
-import HeartIcon from './../../assets/HeartIcon';
 import Grid from '@material-ui/core/Grid';
-import WebsiteImage from './../../assets/website_bg.jpg';
-import AiImage from './../../assets/word_embedding_bg.jpg';
 import Fade from 'react-reveal/Fade'
 import TriangleOne from './../../assets/TringleOne';
 import TriangleTwo from './../../assets/TriangleTwo';
@@ -21,7 +17,7 @@ function Projects(props) {
     const classes = useStyles();
 
     return (
-        <div className={classes.container}>
+        <div className={classes.container} id="projects">
             <Container maxWidth="lg">
                 <Toolbar disableGutters className={classes.toolbar}>
                     <img className={classes.logo} src={logo} alt="logo" />
@@ -40,16 +36,21 @@ function Projects(props) {
 
                 <Grid container className={classes.heroGrid}>
                     <Grid item xs={7}>
-                        <Typography variant="h1" component="h1" className={classes.title}>
-                            Built with Deduction and Love
+                        <Fade >
+                            <Typography variant="h1" component="h1" className={classes.title}>
+                                Built with Deduction and Love
+
                         </Typography>
+                        </Fade>
                     </Grid>
                     <Grid item xs={5}>
-                        <Typography variant="h5">
-                            We love what we do and we are always ready
-                            to use what we learn to go above and beyond
-                            for our clients. Here are some of our works:
+                        <Fade delay={500}>
+                            <Typography variant="h5">
+                                We love what we do and we are always ready
+                                to use what we learn to go above and beyond
+                                for our clients. Here are some of our works:
                         </Typography>
+                        </Fade>
                     </Grid>
                 </Grid>
 
@@ -67,7 +68,7 @@ function Projects(props) {
                     <Grid item xs={4} className={classes.pictureContainer}>
                         <img className={classes.lineCircle} src={LineCircle} width="200" alt="line circle icon" />
                         <div className={classes.pictureBackground}>
-                            <img className={classes.imageOne} width="100%" src={BgImage} alt="Background Image" />
+                            <img className={classes.imageOne} width="100%" src={BgImage} alt=" one" />
                             <div className={classes.logoContainer}>
                                 <TriangleOne className={classes.imageLogo} />
                             </div>
@@ -79,7 +80,7 @@ function Projects(props) {
                     <Grid item xs={4} className={classes.pictureContainer}>
                         <img className={classes.lineCircle} src={LineCircle} width="200" alt="line circle icon" />
                         <div className={classes.pictureBackground}>
-                            <img className={classes.imageTwo} width="100%" src={BgImageTwo} alt="Background Image" />
+                            <img className={classes.imageTwo} width="100%" src={BgImageTwo} alt=" two" />
                             <div className={classes.logoContainer}>
                                 <TriangleTwo className={classes.imageLogo} />
                             </div>
@@ -187,8 +188,8 @@ const useStyles = makeStyles((theme) => ({
     pictureContainer: {
         position: 'relative'
     },
-    addPadding : {
-        paddingBottom:100
+    addPadding: {
+        paddingBottom: 100
     }
 }));
 

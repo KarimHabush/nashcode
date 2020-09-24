@@ -10,11 +10,13 @@ import Typography from '@material-ui/core/Typography';
 import NIcon from './../../assets/NIcon';
 import Fade from 'react-reveal/Fade'
 
+
+
 class Hero extends React.Component {
     render() {
         const { classes } = this.props;
         return (
-            <div className={classes.container}>
+            <div className={classes.container} id="hero">
                 <div className={classes.sectionOne}>
 
                     <Container maxWidth="lg" className={classes.containerOne}>
@@ -35,15 +37,16 @@ class Hero extends React.Component {
 
                         <Grid container direction="row" spacing={1} className={classes.gridOne}>
                             <Grid item xs={7} >
-                                <Fade left>
+                                <Fade duration={3000}>
                                     <Typography component="h1" variant="h3" className={classes.homeTitle}>
                                         We build products to satisfy<br />both <span className={classes.colorPrimary}>you</span> and <span className={classes.colorPrimary}>our</span> team!
                                     </Typography>
                                 </Fade>
-                                <Fade bottom>
+                                <Fade delay={500} duration={3000}>
                                     <button className={classes.button}>SEE OUR WORK</button>
 
                                 </Fade>
+                               
                             </Grid>
                             <Grid item xs={5} className={classes.subGridTwo}>
                                 <NIcon className={classes.nIcon} />

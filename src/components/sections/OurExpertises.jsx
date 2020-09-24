@@ -84,20 +84,16 @@ function OurExpertises(props) {
         setValue(newValue);
     };
     return (
-        <div className={classes.container}>
+        <div className={classes.container} id="ourexpertises"> 
             <Container maxWidth="lg">
-                <Fade bottom>
-                    <Typography variant="h3" component="h2" className={classes.title}>OUR EXPERTISES</Typography>
+                <Typography variant="h3" component="h2" className={classes.title}>OUR EXPERTISES</Typography>
 
-                </Fade>
-                <Fade bottom>
-                    <Typography variant="h5" component="p" className={classes.description}>
-                        We use the latest technologies to provide the best software engineering
+                <Typography variant="h5" component="p" className={classes.description}>
+                    We use the latest technologies to provide the best software engineering
                     <br />solutions that respond to the modern market needs.
                 </Typography>
-                </Fade>
 
-                <Fade bottom>
+                <Fade >
                     <Tabs
                         className={classes.tabs}
                         value={value}
@@ -123,14 +119,23 @@ function OurExpertises(props) {
                             </div>
                             <Grid container >
                                 <Grid item xs={4} >
-                                    <img src={item.icon} height="150" alt="AI icon" />
+                                    <Fade left>
+                                        <img src={item.icon} height="150" alt="AI icon" />
+                                    </Fade>
+
                                 </Grid>
                                 <Grid item xs={8} className={classes.tabInfo}>
                                     <Typography variant="h3" component="h4" className={classes.infoTitle} >
-                                        {item.title}
+                                        <Fade >
+
+                                            {item.title}
+                                        </Fade>
                                     </Typography>
                                     <Typography variant="h5" component="p"  >
-                                        {item.description}
+                                        <Fade delay={500} cascade>
+
+                                            {item.description}
+                                        </Fade>
                                     </Typography>
                                 </Grid>
 

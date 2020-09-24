@@ -45,7 +45,7 @@ function WhoWeAre(props) {
     ]
 
     return (
-        <div className={classes.container}>
+        <div className={classes.container} id="whoweare">
             <Container maxWidth="lg">
                 <Fade bottom>
                     <Typography variant="h3" component="h2" className={classes.title}>

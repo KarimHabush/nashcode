@@ -9,23 +9,20 @@ import Rotate from 'react-reveal/Rotate'
 import TriangleOne from './../../assets/TringleOne';
 import TriangleTwo from './../../assets/TriangleTwo';
 import LineCircle from './../../assets/line_circle_dark.svg'
-import AnimateOnScroll from './../../helpers/AnimateOnScroll';
 
 function OurWork(props) {
     const classes = useStyles();
     return (
-        <div className={classes.container}>
+        <div className={classes.container} id="ourwork">
             <Container maxWidth="lg">
-                <Fade bottom>
-                    <Typography variant="h3" component="h2" className={classes.title}>
-                        OUR WORK
+                <Typography variant="h3" component="h2" className={classes.title}>
+                    OUR WORK
                     </Typography>
-                    <Typography variant="h5" component="p" className={classes.description}>
-                        We are a team of dreamers pushed by our curiosity
+                <Typography variant="h5" component="p" className={classes.description}>
+                    We are a team of dreamers pushed by our curiosity
                     <br />to experiment and create meaningful solutions using what we learned.
                 </Typography>
 
-                </Fade>
 
                 <Grid container spacing={10}>
                     <Grid item xs={8} className={classes.projectContainer}>
@@ -39,13 +36,25 @@ function OurWork(props) {
                         </Typography>
                     </Grid>
                     <Grid item xs={4} className={classes.pictureContainer}>
+
                         <img className={classes.lineCircle} src={LineCircle} width="200" alt="line circle icon" />
                         <div className={classes.pictureBackground}>
-                            <img className={classes.imageOne} width="100%" src={BgImage} alt="Background Image" />
-                            <div className={classes.logoContainer}>
-                                <TriangleOne className={classes.logo} />
-                            </div>
+                            <Rotate delay={1000} top right>
+
+                                <>
+                                    <img className={classes.imageOne} width="100%" src={BgImage} alt="Background" />
+                                </>
+                            </Rotate>
+                            <Fade>
+                                <div className={classes.logoContainer}>
+                                    <Fade delay={800}>
+                                        <TriangleOne className={classes.logo} />
+                                    </Fade>
+
+                                </div>
+                            </Fade>
                         </div>
+
                     </Grid>
                 </Grid>
 
@@ -54,9 +63,11 @@ function OurWork(props) {
                     <Grid item xs={4} className={classes.pictureContainer}>
                         <img className={classes.lineCircle} src={LineCircle} width="200" alt="line circle icon" />
                         <div className={classes.pictureBackground}>
-                            <img className={classes.imageTwo} width="100%" src={BgImageTwo} alt="Background Image" />
+                            <img className={classes.imageTwo} width="100%" src={BgImageTwo} alt="One" />
                             <div className={classes.logoContainer}>
-                                <TriangleTwo className={classes.logo} />
+                                <Fade bottom>
+                                    <TriangleTwo className={classes.logo} />
+                                </Fade>
                             </div>
                         </div>
                     </Grid>
@@ -118,7 +129,7 @@ const useStyles = makeStyles((theme) => ({
         transform: 'rotate(10deg)'
     },
     logoContainer: {
-        backgroundColor: '#f9f9f9',
+        backgroundColor: '#eeeeee',
         height: '80%',
         width: '70%',
         position: 'absolute',
