@@ -155,7 +155,7 @@ function OurExpertises(props) {
 const useStyles = makeStyles((theme) => ({
     container: {
         textAlign: 'center',
-        padding: '0px 0',
+        padding: '0px 0 160px 0',
         backgroundColor: '#f9f9f9'
     },
     title: {

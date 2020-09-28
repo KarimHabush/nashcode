@@ -16,7 +16,7 @@ function Sidebar(props) {
                     to="hero"
                     spy={true}
                     smooth={true}
-                    duration={500}
+                    duration={2000}
                 />
                 </li>
                 <li className={classes.element}>
@@ -26,7 +26,7 @@ function Sidebar(props) {
                     to="wepresent"
                     spy={true}
                     smooth={true}
-                    duration={500}
+                    duration={2000}
                 />
                 </li>
                 <li className={classes.element}>
@@ -36,7 +36,7 @@ function Sidebar(props) {
                     to="ourexpertises"
                     spy={true}
                     smooth={true}
-                    duration={500}
+                    duration={2000}
                 />
                 </li>
                 <li className={classes.element}>
@@ -46,7 +46,7 @@ function Sidebar(props) {
                     to="ourwork"
                     spy={true}
                     smooth={true}
-                    duration={500}
+                    duration={2000}
                 />
                 </li>
                 <li className={classes.element}>
@@ -56,7 +56,7 @@ function Sidebar(props) {
                     to="whoweare"
                     spy={true}
                     smooth={true}
-                    duration={500}
+                    duration={2000}
                 />
                 </li>
                 <li className={classes.element}>
@@ -66,7 +66,7 @@ function Sidebar(props) {
                     to="motivation"
                     spy={true}
                     smooth={true}
-                    duration={500}
+                    duration={2000}
                 />
                 </li>
                 

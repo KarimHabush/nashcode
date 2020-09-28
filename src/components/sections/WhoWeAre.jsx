@@ -91,16 +91,16 @@ const useStyles = makeStyles((theme) => ({
     container: {
         backgroundColor: '#0F0A3C',
         textAlign: 'center',
-        padding: '100px 0 100px 0'
+        padding: '60px 0 100px 0'
     },
     title: {
         color: "#f9f9f9",
         fontWeight: 600,
-        marginBottom: 60
+        marginBottom: 40
     },
     description: {
         color: '#f9f9f9',
-        marginBottom: 100
+        marginBottom: 60
     },
     presentations: {
         color: '#f9f9f9',

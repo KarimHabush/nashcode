@@ -8,13 +8,46 @@ import PropTypes from 'prop-types';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import NIcon from './../../assets/NIcon';
+import AIcon from './../../assets/AIcon';
+import SIcon from './../../assets/SIcon';
+import HIcon from './../../assets/HIcon';
 import Fade from 'react-reveal/Fade'
 
 
 
 class Hero extends React.Component {
+
+    constructor() {
+        super();
+        this.state = {
+            currentImage: 0
+        }
+
+    }
+    componentDidMount() {
+        this.intervalId = setInterval(this.changeImage.bind(this), 3000)
+    }
+    changeImage = (image) => {
+        if (this.state.currentImage === 3)
+            this.setState({ currentImage: 0 })
+        else this.setState(previousState => ({
+            currentImage: previousState.currentImage + 1
+        }
+        ))
+
+    }
+    componentWillUnmount() {
+        clearInterval(this.intervalId);
+    }
+
     render() {
         const { classes } = this.props;
+        const Icons = [
+            <NIcon className={classes.nIcon} />,
+            <AIcon className={classes.nIcon} />,
+            <SIcon className={classes.nIcon} />,
+            <HIcon className={classes.nIcon} />
+        ]
         return (
             <div className={classes.container} id="hero">
                 <div className={classes.sectionOne}>
@@ -31,7 +64,7 @@ class Hero extends React.Component {
                             </Link>
                                 <Link className={classes.link} to="/contact-us" >
                                     CONTACT US
-                            </Link>
+                                </Link>
                             </div>
                         </Toolbar>
 
@@ -46,10 +79,12 @@ class Hero extends React.Component {
                                     <button className={classes.button}>SEE OUR WORK</button>
 
                                 </Fade>
-                               
+
                             </Grid>
                             <Grid item xs={5} className={classes.subGridTwo}>
-                                <NIcon className={classes.nIcon} />
+                                <Fade>
+                                    {Icons[this.state.currentImage]}
+                                </Fade>
                             </Grid>
 
                         </Grid>
@@ -111,7 +146,8 @@ const styles = theme => ({
         border: 'none'
     },
     nIcon: {
-        width: '80%',
+        height: 400,
+        transition:"opacity 500ms ease-in-out"
     },
     nLineOne: {
         position: 'absolute',

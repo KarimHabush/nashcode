@@ -26,21 +26,26 @@ function OurWork(props) {
 
                 <Grid container spacing={10}>
                     <Grid item xs={8} className={classes.projectContainer}>
-                        <Typography className={classes.projectTitle} variant="h4">
-                            Study from home.
+                        <Fade duration={3000}>
+
+                            <Typography className={classes.projectTitle} variant="h4">
+                                Study from home.
                         </Typography>
-                        <Typography className={classes.projectDesc} variant="h6">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                            ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </Fade>
+                        <Fade delay={500} duration={3000}>
+
+                            <Typography className={classes.projectDesc} variant="h6">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                                et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                                ullamco laboris nisi ut aliquip ex ea commodo consequat.
                         </Typography>
+                        </Fade>
                     </Grid>
                     <Grid item xs={4} className={classes.pictureContainer}>
 
                         <img className={classes.lineCircle} src={LineCircle} width="200" alt="line circle icon" />
                         <div className={classes.pictureBackground}>
                             <Rotate delay={1000} top right>
-
                                 <>
                                     <img className={classes.imageOne} width="100%" src={BgImage} alt="Background" />
                                 </>
@@ -63,23 +68,32 @@ function OurWork(props) {
                     <Grid item xs={4} className={classes.pictureContainer}>
                         <img className={classes.lineCircle} src={LineCircle} width="200" alt="line circle icon" />
                         <div className={classes.pictureBackground}>
-                            <img className={classes.imageTwo} width="100%" src={BgImageTwo} alt="One" />
+                            <Rotate delay={1000} top left>
+                                <>
+                                    <img className={classes.imageTwo} width="100%" src={BgImageTwo} alt="One" />
+                                </>
+                            </Rotate>
                             <div className={classes.logoContainer}>
-                                <Fade bottom>
+                                <Fade>
                                     <TriangleTwo className={classes.logo} />
                                 </Fade>
                             </div>
                         </div>
                     </Grid>
                     <Grid item xs={8} className={classes.projectContainer}>
+                        <Fade delay={500} duration={3000}>
+                        </Fade>
                         <Typography className={classes.projectTitle} variant="h4">
                             Study from home.
                         </Typography>
-                        <Typography className={classes.projectDesc} variant="h6">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                            ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        <Fade delay={500} duration={3000}>
+
+                            <Typography className={classes.projectDesc} variant="h6">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                                et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                                ullamco laboris nisi ut aliquip ex ea commodo consequat.
                         </Typography>
+                        </Fade>
                     </Grid>
                 </Grid>
             </Container>
@@ -93,13 +107,13 @@ const useStyles = makeStyles((theme) => ({
     container: {
         backgroundColor: '#f9f9f9',
         textAlign: 'center',
-        padding: '100px 0 100px 0',
+        padding: '0 0 100px 0',
         position: 'relative'
     },
     title: {
         color: '#0F0A3C',
         fontWeight: 600,
-        marginBottom: 60
+        marginBottom: 40
     },
     description: {
         color: '#404040',

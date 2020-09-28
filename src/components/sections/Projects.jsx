@@ -6,6 +6,7 @@ import { makeStyles, Typography } from '@material-ui/core'
 import logo from './../../assets/logo_dark.svg'
 import Grid from '@material-ui/core/Grid';
 import Fade from 'react-reveal/Fade'
+import Rotate from 'react-reveal/Rotate'
 import TriangleOne from './../../assets/TringleOne';
 import TriangleTwo from './../../assets/TriangleTwo';
 import LineCircle from './../../assets/line_circle_dark.svg'
@@ -35,7 +36,7 @@ function Projects(props) {
                 </Toolbar>
 
                 <Grid container className={classes.heroGrid}>
-                    <Grid item xs={7}>
+                    <Grid item xs={6}>
                         <Fade >
                             <Typography variant="h1" component="h1" className={classes.title}>
                                 Built with Deduction and Love
@@ -43,7 +44,7 @@ function Projects(props) {
                         </Typography>
                         </Fade>
                     </Grid>
-                    <Grid item xs={5}>
+                    <Grid item xs={6}>
                         <Fade delay={500}>
                             <Typography variant="h5">
                                 We love what we do and we are always ready
@@ -56,45 +57,73 @@ function Projects(props) {
 
                 <Grid container spacing={10}>
                     <Grid item xs={8} className={classes.projectContainer}>
-                        <Typography className={classes.projectTitle} variant="h4">
-                            Study from home.
+                        <Fade  duration={3000}>
+
+                            <Typography className={classes.projectTitle} variant="h4">
+                                Study from home.
                         </Typography>
-                        <Typography className={classes.projectDesc} variant="h6">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                            ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </Fade>
+                        <Fade delay={500} duration={3000}>
+
+                            <Typography className={classes.projectDesc} variant="h6">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                                et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                                ullamco laboris nisi ut aliquip ex ea commodo consequat.
                         </Typography>
+                        </Fade>
                     </Grid>
                     <Grid item xs={4} className={classes.pictureContainer}>
+
                         <img className={classes.lineCircle} src={LineCircle} width="200" alt="line circle icon" />
                         <div className={classes.pictureBackground}>
-                            <img className={classes.imageOne} width="100%" src={BgImage} alt=" one" />
-                            <div className={classes.logoContainer}>
-                                <TriangleOne className={classes.imageLogo} />
-                            </div>
+                            <Rotate delay={1000} top right>
+                                <>
+                                    <img className={classes.imageOne} width="100%" src={BgImage} alt="Background" />
+                                </>
+                            </Rotate>
+                            <Fade>
+                                <div className={classes.logoContainer}>
+                                    <Fade delay={800}>
+                                        <TriangleOne className={classes.imageLogo} />
+                                    </Fade>
+
+                                </div>
+                            </Fade>
                         </div>
+
                     </Grid>
                 </Grid>
+
                 <Grid container spacing={10} className={classes.addPadding}>
 
                     <Grid item xs={4} className={classes.pictureContainer}>
                         <img className={classes.lineCircle} src={LineCircle} width="200" alt="line circle icon" />
                         <div className={classes.pictureBackground}>
-                            <img className={classes.imageTwo} width="100%" src={BgImageTwo} alt=" two" />
+                            <Rotate delay={1000} top left>
+                                <>
+                                    <img className={classes.imageTwo} width="100%" src={BgImageTwo} alt="One" />
+                                </>
+                            </Rotate>
                             <div className={classes.logoContainer}>
-                                <TriangleTwo className={classes.imageLogo} />
+                                <Fade >
+                                    <TriangleTwo className={classes.imageLogo} />
+                                </Fade>
                             </div>
                         </div>
                     </Grid>
                     <Grid item xs={8} className={classes.projectContainer}>
-                        <Typography className={classes.projectTitle} variant="h4">
-                            Study from home.
-                        </Typography>
-                        <Typography className={classes.projectDesc} variant="h6">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                            ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                        </Typography>
+                        <Fade duration={3000}>
+                            <Typography className={classes.projectTitle} variant="h4">
+                                Study from home.
+                            </Typography>
+                        </Fade>
+                        <Fade delay={500} duration={3000}>
+                            <Typography className={classes.projectDesc} variant="h6">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                                et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                                ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            </Typography>
+                        </Fade>
                     </Grid>
                 </Grid>
 
@@ -129,7 +158,7 @@ const useStyles = makeStyles((theme) => ({
     },
     title: {
         fontWeight: '600',
-        fontSize: '120pt',
+        fontSize: '105pt',
         color: '#0F0A3C'
     },
     heroGrid: {
