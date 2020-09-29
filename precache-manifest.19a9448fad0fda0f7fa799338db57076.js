@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "922ae120d84e2390cce51353f09880bb",
+    "revision": "86d84d23343f0f43fe4969a8647bdd52",
     "url": "/nashcode/index.html"
   },
   {
-    "revision": "bbe51b4082dae57f8122",
-    "url": "/nashcode/static/css/main.afe546c8.chunk.css"
+    "revision": "21ccffb7087f9b45fe03",
+    "url": "/nashcode/static/css/main.c7b5aa42.chunk.css"
   },
   {
-    "revision": "ba7af4108be6059e91c0",
-    "url": "/nashcode/static/js/2.7ae0ddca.chunk.js"
+    "revision": "7c77f62cc908d61726e8",
+    "url": "/nashcode/static/js/2.bdf4c2dd.chunk.js"
   },
   {
     "revision": "0749163b59fbee32225059cb60c18af6",
-    "url": "/nashcode/static/js/2.7ae0ddca.chunk.js.LICENSE.txt"
+    "url": "/nashcode/static/js/2.bdf4c2dd.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "bbe51b4082dae57f8122",
-    "url": "/nashcode/static/js/main.28f9a6dc.chunk.js"
+    "revision": "21ccffb7087f9b45fe03",
+    "url": "/nashcode/static/js/main.7e8a597b.chunk.js"
   },
   {
     "revision": "30c9ccff68460b0fe989",
@@ -32,8 +32,24 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/nashcode/static/media/4249454.0695d313.jpg"
   },
   {
+    "revision": "70f64248a1f6561854ca96e17236399f",
+    "url": "/nashcode/static/media/ABgSvg.70f64248.svg"
+  },
+  {
     "revision": "a6f9103bc0e6a5c9040684bc30fccff1",
     "url": "/nashcode/static/media/DSCN3403.a6f9103b.jpg"
+  },
+  {
+    "revision": "ca13328e08ded4e08dfe24c0314558d5",
+    "url": "/nashcode/static/media/HBgSvg.ca13328e.svg"
+  },
+  {
+    "revision": "daae83825dfd1b692e013c5ac4b6b3ad",
+    "url": "/nashcode/static/media/NBgSvg.daae8382.svg"
+  },
+  {
+    "revision": "5b5ed210f909955b87f42d05f44a4fcb",
+    "url": "/nashcode/static/media/SBgSvg.5b5ed210.svg"
   },
   {
     "revision": "40e9fe5513f1a11040bb30cb520ae7d7",
@@ -78,5 +94,9 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "19ef5a9f0512d116cb82252aed3bbc42",
     "url": "/nashcode/static/media/value_star.19ef5a9f.svg"
+  },
+  {
+    "revision": "7ed0b1c5ec20031a15447e86154d6c9f",
+    "url": "/nashcode/static/media/word_embedding_bg.7ed0b1c5.jpg"
   }
 ]);
