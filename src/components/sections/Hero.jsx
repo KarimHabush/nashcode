@@ -7,12 +7,12 @@ import { withStyles } from '@material-ui/styles';
 import PropTypes from 'prop-types';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-import NIcon from './../../assets/NIcon';
-import AIcon from './../../assets/AIcon';
-import SIcon from './../../assets/SIcon';
-import HIcon from './../../assets/HIcon';
+import NIcon from './../../assets/NBgSvg.svg';
+import AIcon from './../../assets/ABgSvg.svg';
+import SIcon from './../../assets/SBgSvg.svg';
+import HIcon from './../../assets/HBgSvg.svg';
 import Fade from 'react-reveal/Fade'
-
+import image from './../../assets/word_embedding_bg.jpg'
 
 
 class Hero extends React.Component {
@@ -25,7 +25,7 @@ class Hero extends React.Component {
 
     }
     componentDidMount() {
-        this.intervalId = setInterval(this.changeImage.bind(this), 3000)
+        this.intervalId = setInterval(this.changeImage.bind(this), 1000)
     }
     changeImage = (image) => {
         if (this.state.currentImage === 3)
@@ -43,10 +43,10 @@ class Hero extends React.Component {
     render() {
         const { classes } = this.props;
         const Icons = [
-            <NIcon className={classes.nIcon} />,
-            <AIcon className={classes.nIcon} />,
-            <SIcon className={classes.nIcon} />,
-            <HIcon className={classes.nIcon} />
+            <img src={NIcon} className={classes.nIcon} alt="Letter N"/>,
+            <img src={AIcon} className={classes.nIcon} alt="Letter A"/>,
+            <img src={SIcon} className={classes.nIcon} alt="Letter S"/>,
+            <img src={HIcon} className={classes.nIcon} alt="Letter H"/>
         ]
         return (
             <div className={classes.container} id="hero">
@@ -82,9 +82,8 @@ class Hero extends React.Component {
 
                             </Grid>
                             <Grid item xs={5} className={classes.subGridTwo}>
-                                <Fade>
-                                    {Icons[this.state.currentImage]}
-                                </Fade>
+                                <img src={image} className={classes.nIcon} alt="A robot sitting." />
+                                {Icons[this.state.currentImage]}
                             </Grid>
 
                         </Grid>
@@ -147,7 +146,9 @@ const styles = theme => ({
     },
     nIcon: {
         height: 400,
-        transition:"opacity 500ms ease-in-out"
+        position: 'absolute',
+        right: 0,
+        top: -200
     },
     nLineOne: {
         position: 'absolute',
@@ -162,7 +163,8 @@ const styles = theme => ({
         width: '250px',
     },
     subGridTwo: {
-        textAlign: 'right'
+        textAlign: 'right',
+        position: 'relative'
     }
 });
 

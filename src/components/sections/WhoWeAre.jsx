@@ -77,7 +77,6 @@ function WhoWeAre(props) {
                                         {member.icon}
 
                                 </Grid>
-
                             </>
                         ))
                     }

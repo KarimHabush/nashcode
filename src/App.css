@@ -3,3 +3,10 @@
 * {
   font-family: 'Asap', sans-serif !important;
 };
+
+
+::selection {
+  color: red;
+  background: yellow;
+}
+
